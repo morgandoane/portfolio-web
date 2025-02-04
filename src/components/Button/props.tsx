@@ -58,7 +58,7 @@ export const buttonStyles = tv({
 		},
 		pop: {
 			// Pop hover and press animations
-			true: 'transition-transform transform-gpu active:scale-95 hover:scale-105',
+			true: 'transition-transform transform-gpu active:scale-99 hover:scale-102',
 			false: '',
 		},
 	},
@@ -79,7 +79,7 @@ export const buttonStyles = tv({
 			variant: 'solid',
 			color: 'neutral',
 			className:
-				'bg-neutral-800 active:bg-neutral-900 hover:bg-neutral-900 text-white',
+				'bg-stone-800 active:bg-stone-900 hover:bg-stone-900 text-white',
 		},
 		{
 			variant: 'solid',
@@ -98,7 +98,7 @@ export const buttonStyles = tv({
 			variant: 'outline',
 			color: 'neutral',
 			className:
-				'border border-2 border-neutral-800 active:bg-neutral-300 hover:bg-neutral-300 text-neutral-800',
+				'border border-2 border-stone-800 active:bg-stone-300 hover:bg-stone-300 text-stone-800',
 		},
 	],
 	defaultVariants: {

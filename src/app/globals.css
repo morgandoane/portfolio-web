@@ -1,5 +1,19 @@
 @import 'tailwindcss';
 
+@font-face {
+	font-family: 'Satoshi';
+	src: url('/fonts/Satoshi-Variable.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('/fonts/Satoshi-VariableItalic.woff2') format('woff2');
+	font-weight: 100 900;
+	font-style: italic;
+}
+
 html,
 body {
 	margin: 0;
@@ -8,7 +22,7 @@ body {
 }
 
 body {
-	font-family: Inter, Helvetica, sans-serif;
+	font-family: Satoshi, Helvetica, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -19,13 +33,38 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Whyte, Helvetica, sans-serif;
+	font-family: Satoshi, Helvetica, sans-serif;
+	@apply font-medium leading-relaxed;
+}
+
+h1 {
+	@apply text-5xl;
+}
+
+h2 {
+	@apply text-4xl;
+}
+
+h3 {
+	@apply text-3xl;
+}
+
+h4 {
+	@apply text-2xl;
+}
+
+h5 {
+	@apply text-xl;
+}
+
+h6 {
+	@apply text-lg;
 }
 
 p {
-	font-family: Whyte, Helvetica, sans-serif;
+	font-family: Satoshi, Helvetica, sans-serif;
 }
 
 button {
-	font-family: Whyte, Helvetica, sans-serif;
+	font-family: Satoshi, Helvetica, sans-serif;
 }

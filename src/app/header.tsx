@@ -1,11 +1,15 @@
+import Link from 'next/link';
 import { FC } from 'react';
 
 const Header: FC = () => {
 	return (
-		<div className="p-4 fixed top-2 left-2 right-2">
-			<button className="text-xl cursor-pointer outline-none active:text-neutral-700">
+		<div className="px-12 py-4 fixed top-0 left-0 right-0 bg-stone-200 z-10">
+			<Link
+				href="/"
+				className="text-xl cursor-pointer outline-none active:text-neutral-700"
+			>
 				Morgan Doane
-			</button>
+			</Link>
 		</div>
 	);
 };

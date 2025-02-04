@@ -1,14 +1,11 @@
 import type { Metadata } from 'next';
 import localFont from 'next/font/local';
-import { Inter } from 'next/font/google';
 import './globals.css';
 import Header from './header';
 
-const whyte = localFont({ src: './whyte.variable.woff2' });
-const inter = Inter({
-	subsets: ['latin'],
-	display: 'swap',
-	variable: '--font-inter',
+const satoshi = localFont({ src: '../../public/fonts/Satoshi-Variable.woff2' });
+const satoshiItalic = localFont({
+	src: '../../public/fonts/Satoshi-VariableItalic.woff2',
 });
 
 export const metadata: Metadata = {
@@ -22,8 +19,11 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang="en" className={`${inter.variable} ${whyte.className}`}>
-			<body className="h-screen overflow-y-auto">
+		<html
+			lang="en"
+			className={`${satoshi.className} ${satoshiItalic.className}`}
+		>
+			<body className="h-screen overflow-y-auto bg-stone-200">
 				<Header />
 				{children}
 			</body>
