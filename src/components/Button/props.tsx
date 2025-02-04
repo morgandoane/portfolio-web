@@ -11,12 +11,14 @@ export type ButtonColor =
 	| 'success';
 export type ButtonVariant = 'solid' | 'outline' | 'flat';
 export type ButtonRounded = true | false;
+export type ButtonPop = true | false;
 
 export const defaultButtonProps = {
 	size: 'md' as ButtonSize,
 	color: 'neutral' as ButtonColor,
 	variant: 'solid' as ButtonVariant,
 	rounded: true as ButtonRounded,
+	pop: false as ButtonPop,
 };
 
 export interface ButtonProps extends Omit<BaseProps, 'className'> {
@@ -24,6 +26,7 @@ export interface ButtonProps extends Omit<BaseProps, 'className'> {
 	color?: ButtonColor;
 	variant?: ButtonVariant;
 	rounded?: ButtonRounded;
+	pop?: ButtonPop;
 	startContent?: ReactNode;
 	endContent?: ReactNode;
 	className?: string;
@@ -52,6 +55,11 @@ export const buttonStyles = tv({
 		rounded: {
 			true: 'rounded-full',
 			false: 'rounded-lg',
+		},
+		pop: {
+			// Pop hover and press animations
+			true: 'transition-transform transform-gpu active:scale-95 hover:scale-105',
+			false: '',
 		},
 	},
 	compoundVariants: [

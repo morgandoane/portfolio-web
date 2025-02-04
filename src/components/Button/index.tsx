@@ -8,13 +8,14 @@ const Button: FC<PropsWithChildren<ButtonProps>> = ({
 	color = defaultButtonProps.color,
 	variant = defaultButtonProps.variant,
 	rounded = defaultButtonProps.rounded,
+	pop = defaultButtonProps.pop,
 	startContent,
 	endContent,
 	className,
 	children,
 	...rest
 }) => {
-	const combinedClasses = buttonStyles({ size, color, variant, rounded });
+	const combinedClasses = buttonStyles({ size, color, variant, rounded, pop });
 
 	return (
 		<BaseButton {...rest} className={classNames(combinedClasses, className)}>

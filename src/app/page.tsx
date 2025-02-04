@@ -2,6 +2,8 @@ import Button from '@/components/Button';
 import Tag from './tag';
 import { ArrowRightIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
+import Link from 'next/link';
+import { buttonStyles } from '@/components/Button/props';
 
 export default function Home() {
 	return (
@@ -30,12 +32,30 @@ export default function Home() {
 					`}
 				</p>
 				<div className="flex gap-4 mt-8">
-					<Button size="lg" endContent={<ArrowRightIcon className="w-6 h-6" />}>
+					<Link
+						href="/portfolio"
+						className={buttonStyles({
+							variant: 'solid',
+							color: 'neutral',
+							size: 'lg',
+							pop: true,
+						})}
+					>
 						Portfolio
-					</Button>
-					<Button variant="outline" size="lg">
-						Contact
-					</Button>
+						<ArrowRightIcon className="w-6 h-6" />
+					</Link>
+					<Link
+						href="/contact"
+						className={buttonStyles({
+							variant: 'outline',
+							color: 'neutral',
+							size: 'lg',
+							pop: true,
+						})}
+					>
+						Portfolio
+						<ArrowRightIcon className="w-6 h-6" />
+					</Link>
 				</div>
 			</div>
 		</div>
