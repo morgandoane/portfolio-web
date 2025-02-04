@@ -28,7 +28,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 			<Link
 				ref={ref}
 				href={`/portfolio/${path}`}
-				className="rounded-xl cursor-pointer block overflow-hidden"
+				className="cursor-pointer block"
 			>
 				<motion.div
 					animate={{ opacity: loaded ? 1 : 0 }}
@@ -42,7 +42,7 @@ const ProjectCard: FC<ProjectCardProps> = ({
 						alt={title}
 						width={width}
 						height={width}
-						className="aspect-square object-cover bg-stone-200"
+						className="aspect-square object-cover bg-stone-100 rounded-xl"
 					/>
 					<h3 className="mt-2">{title}</h3>
 					<p>{description}</p>
