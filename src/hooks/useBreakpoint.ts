@@ -10,7 +10,23 @@ const getBreakpoint = (width: number): Breakpoint => {
 	return 'sm';
 };
 
-export const useBreakpoint = (): Breakpoint => {
+export const useBreakpoint = (): {
+	breakpoint: Breakpoint;
+	atLeast: (breakpoint: Breakpoint) => boolean;
+	atMost: (breakpoint: Breakpoint) => boolean;
+} => {
 	const { width } = useScreenSize();
-	return getBreakpoint(width);
+	const breakpoint = getBreakpoint(width);
+
+	const atLeast = (breakpoint: Breakpoint) => {
+		const breakpoints = ['sm', 'md', 'lg', 'xl', '2xl'];
+		return breakpoints.indexOf(breakpoint) <= breakpoints.indexOf(breakpoint);
+	};
+
+	const atMost = (breakpoint: Breakpoint) => {
+		const breakpoints = ['sm', 'md', 'lg', 'xl', '2xl'];
+		return breakpoints.indexOf(breakpoint) >= breakpoints.indexOf(breakpoint);
+	};
+
+	return { breakpoint, atLeast, atMost };
 };

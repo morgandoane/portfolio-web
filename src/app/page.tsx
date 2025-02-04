@@ -21,7 +21,7 @@ export default function Home() {
 					alt="Morgan Doane"
 					className="rounded-full object-cover mb-4"
 				/>
-				<p className="text-3xl sm:text-4xl md:text-5xl mb-3 whitespace-pre-line leading-normal text-neutral-800">
+				<p className="text-3xl sm:text-4xl md:text-6xl mb-3 whitespace-pre-line leading-normal text-neutral-800">
 					{"I'm Morgan Doane"}, a{' '}
 					<Tag
 						options={[

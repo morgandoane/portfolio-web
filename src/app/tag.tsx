@@ -17,37 +17,20 @@ const Tag: FC<TagProps> = ({ options }) => {
 		return () => clearInterval(interval);
 	}, [options.length]);
 
-	const getWidthFromCharCount = (charCount: number) => {
-		return 110 + charCount * 16;
-	};
-
 	return (
-		<motion.span className="sm:min-w-[700px] sm:border-4 sm:border-neutral-300 sm:rounded-3xl sm:ml-2">
-			<motion.span
-				className="inline-block sm:p-6 sm:h-10 relative"
-				animate={{
-					opacity: 1,
-					width: getWidthFromCharCount(options[index].value.length),
-				}}
-				transition={{ layout: { duration: 0.5, ease: 'easeInOut' } }}
-			>
-				<AnimatePresence mode="wait" presenceAffectsLayout>
-					{options.map((option, i) =>
-						i === index ? (
-							<motion.span
-								key={i}
-								initial={{ opacity: 0, bottom: '-100%' }}
-								animate={{ opacity: index === i ? 1 : 0, bottom: '-30%' }}
-								exit={{ opacity: 0, bottom: '20%' }}
-								transition={{ duration: 0.35, type: 'tween' }}
-								className={classNames(option.className, 'absolute')}
-							>
-								{option.value}
-							</motion.span>
-						) : null
-					)}
-				</AnimatePresence>
-			</motion.span>
+		<motion.span className="relative pl-2 sm:pl-3 md:pl-4">
+			<AnimatePresence mode="wait">
+				<motion.span
+					className={classNames('absolute', options[index].className)}
+					initial={{ opacity: 0, top: 10, scale: 0.95 }}
+					animate={{ opacity: 1, top: '-9%', scale: 1 }}
+					exit={{ opacity: 0, top: -10, scale: 0.95 }}
+					transition={{ duration: 0.25, ease: 'easeInOut' }}
+					key={`tag-${index}`}
+				>
+					{options[index].value}
+				</motion.span>
+			</AnimatePresence>
 		</motion.span>
 	);
 };
