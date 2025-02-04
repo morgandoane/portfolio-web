@@ -10,9 +10,15 @@ export interface ProjectCardProps {
 	path: string;
 	title: string;
 	image: string;
+	description: string;
 }
 
-const ProjectCard: FC<ProjectCardProps> = ({ path, title, image }) => {
+const ProjectCard: FC<ProjectCardProps> = ({
+	path,
+	title,
+	image,
+	description,
+}) => {
 	const ref = useRef<HTMLAnchorElement>(null);
 	const { width } = useSize(ref);
 	const [loaded, setLoaded] = useState(false);
@@ -22,7 +28,7 @@ const ProjectCard: FC<ProjectCardProps> = ({ path, title, image }) => {
 			<Link
 				ref={ref}
 				href={`/portfolio/${path}`}
-				className="bg-stone-300 rounded-xl cursor-pointer block overflow-hidden"
+				className="rounded-xl cursor-pointer block overflow-hidden"
 			>
 				<motion.div
 					animate={{ opacity: loaded ? 1 : 0 }}
@@ -36,8 +42,10 @@ const ProjectCard: FC<ProjectCardProps> = ({ path, title, image }) => {
 						alt={title}
 						width={width}
 						height={width}
-						className="aspect-square object-cover"
+						className="aspect-square object-cover bg-stone-200"
 					/>
+					<h3 className="mt-2">{title}</h3>
+					<p>{description}</p>
 				</motion.div>
 			</Link>
 		</motion.div>
