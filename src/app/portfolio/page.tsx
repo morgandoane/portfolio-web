@@ -1,69 +1,48 @@
 'use client';
-import { FC } from 'react';
-import ProjectCard, { ProjectCardProps } from './project.card';
+import { FC, useState } from 'react';
+import ProjectCard from './project.card';
 import { AnimatePresence, motion } from 'framer-motion';
-
-const projects: ProjectCardProps[] = [
-	{
-		title: 'US Energy Map',
-		path: 'energy',
-		image: 'energy/cover.png',
-		description: 'Demistifying US Energy Production',
-	},
-	{
-		title: 'Islamic Geometric Design',
-		path: 'islamic-geometric-design',
-		image: 'igd/igd%20(2).jpg',
-		description: 'A study of Islamic Geometric Design',
-	},
-	{
-		title: 'Mechanical Design Automation',
-		path: 'mechanical-design-automation',
-		image: 'mda/RadialPreview.png',
-		description: 'Automating the design of mechanical systems',
-	},
-	{
-		title: 'G Chair',
-		path: 'g-chair',
-		image: 'gchair/GChair-04.jpg',
-		description: 'A chair designed & built for Grace.',
-	},
-	{
-		title: 'Coffee Cup Taxonomy',
-		path: 'taxonomy',
-		image: 'taxonomy/cover.jpg',
-		description: 'A study of every coffee cup in the Salt Lake Valley',
-	},
-	{
-		title: 'Telegraph',
-		path: 'telegraph',
-		image: 'telegraph/telegraph.png',
-		description: 'A meterial study in sensory modifcation',
-	},
-	{
-		title: 'BC Lounge Chair',
-		path: 'bc-lounge-chair',
-		image: 'bc/VC07.1.png',
-		description: 'A lounge chair designed for the coast of British Columbia',
-	},
-];
+import Button from '@/components/Button';
+import projects from '@/projects';
 
 const Portfolio: FC = () => {
+	const [tag, setTag] = useState<string | null>(null);
+
 	return (
-		<div className="p-12 pt-20">
-			<h1 className="mb-8">Selected Works</h1>
-			<div className="grid grid-cols-1 gap-12 md:grid-cols-2">
+		<div className="p-8 pt-4 lg:p-32 lg:pt-4">
+			<h1 className="mb-2">Selected Works</h1>
+			<p className="mb-2">Tags</p>
+			<div className="flex flex-wrap gap-2 mb-12">
+				{[...new Set(projects.flatMap((p) => p.tags))].sort().map((t) => (
+					<Button
+						pop
+						onClick={() => setTag(tag === t ? null : t)}
+						variant={tag === t ? 'solid' : 'outline'}
+						size="sm"
+						key={`tag-${t}`}
+					>
+						{t}
+					</Button>
+				))}
+			</div>
+			<div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-8">
 				<AnimatePresence>
-					{projects.map((project) => (
-						<motion.div
-							whileInView={{ opacity: 1, scale: 1 }}
-							initial={{ opacity: 0, scale: 0.95 }}
-							transition={{ duration: 0.3 }}
-							key={`container-${project.path}`}
-						>
-							<ProjectCard key={project.path} {...project} />
-						</motion.div>
-					))}
+					{projects
+						.filter((p) => {
+							if (!tag) return true;
+							return p.tags.includes(tag);
+						})
+						.map((project) => (
+							<motion.div
+								className="pb-12"
+								whileInView={{ opacity: 1, scale: 1 }}
+								initial={{ opacity: 0, scale: 0.9 }}
+								transition={{ duration: 0.3 }}
+								key={`container-${project.id}`}
+							>
+								<ProjectCard key={project.id} project={project} />
+							</motion.div>
+						))}
 				</AnimatePresence>
 			</div>
 		</div>

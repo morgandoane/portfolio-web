@@ -19,7 +19,7 @@ export default function Home() {
 					height={120}
 					width={120}
 					alt="Morgan Doane"
-					className="rounded-full object-cover mb-4"
+					className="rounded-full object-cover mb-4 border-4 border-white"
 				/>
 				<p className="text-3xl sm:text-4xl md:text-6xl mb-3 whitespace-pre-line leading-normal text-neutral-800">
 					{"I'm Morgan Doane"}, a{' '}

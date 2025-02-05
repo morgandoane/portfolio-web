@@ -36,7 +36,7 @@ export const buttonStyles = tv({
 	base: 'flex items-center gap-2 cursor-pointer disabled:cusor-not-allowed outline-none focus:outline-none',
 	variants: {
 		size: {
-			sm: 'px-4 py-2 text-md',
+			sm: 'px-4 py-1.5 text-sm',
 			md: 'px-5 py-2.5 text-md',
 			lg: 'px-8 py-4 text-lg',
 		},
@@ -67,30 +67,32 @@ export const buttonStyles = tv({
 		{
 			variant: 'solid',
 			color: 'primary',
-			className: 'bg-blue-500 active:bg-blue-600 hover:bg-blue-600 text-white',
+			className:
+				'bg-blue-500 border-2 border-blue-500 active:bg-blue-600 hover:bg-blue-600 text-white',
 		},
 		{
 			variant: 'solid',
 			color: 'secondary',
 			className:
-				'bg-purple-500 active:bg-purple-600 hover:bg-purple-600 text-white',
+				'bg-purple-500 border-2 border-purple-500 active:bg-purple-600 hover:bg-purple-600 text-white',
 		},
 		{
 			variant: 'solid',
 			color: 'neutral',
 			className:
-				'bg-stone-800 active:bg-stone-900 hover:bg-stone-900 text-white',
+				'bg-stone-800 border-2 border-stone-800 active:bg-stone-900 hover:bg-stone-900 text-white',
 		},
 		{
 			variant: 'solid',
 			color: 'danger',
-			className: 'bg-red-500 active:bg-red-600 hover:bg-red-600 text-white',
+			className:
+				'bg-red-500 border-2 border-red-500 active:bg-red-600 hover:bg-red-600 text-white',
 		},
 		{
 			variant: 'solid',
 			color: 'success',
 			className:
-				'bg-green-500 active:bg-green-600 hover:bg-green-600 text-white',
+				'bg-green-500 border-2 border-green-500 active:bg-green-600 hover:bg-green-600 text-white',
 		},
 		// Outline
 

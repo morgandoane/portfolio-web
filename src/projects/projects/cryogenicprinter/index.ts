@@ -1,0 +1,20 @@
+import { Project } from '../../types/project';
+
+const project: Project = {
+	id: 'cryogenic-printer',
+	title: 'Cryogenic Printer',
+	caption: 'Group Studio Project - 2024',
+	tags: [
+		'Mechanical Design',
+		'Fabrication',
+		'Prototyping',
+		'Software Engineering',
+	],
+	image: 'energy/squarecover.png',
+	banner: 'energy/cover.png',
+	description:
+		'An experimental 3D printer, leveraging ice as a fabrication medium.',
+	sections: [],
+};
+
+export default project;
