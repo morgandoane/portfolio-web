@@ -5,7 +5,6 @@ import { FC } from 'react';
 import { usePathname } from 'next/navigation';
 
 const links: { href: string; text: string }[] = [
-	{ href: '/portfolio', text: 'Portfolio' },
 	{ href: '/cv', text: 'CV' },
 	{ href: '/contact', text: 'Contact' },
 ];

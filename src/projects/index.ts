@@ -11,15 +11,15 @@ import uofuai from './projects/uofuai';
 import { Project } from './types/project';
 
 const projects: Project[] = [
-	bcloungechair,
-	communalhydroponics,
-	conveyorsystems,
 	cryogenicprinter,
 	energy,
 	gchair,
 	islamicgeometricdesign,
+	conveyorsystems,
+	communalhydroponics,
 	taxonomy,
 	telegraph,
+	bcloungechair,
 	uofuai,
 ];
 

@@ -13,7 +13,12 @@ const ProjectPage: FC<{
 	return (
 		<div>
 			{project.banner && (
-				<div className={`relative h-[${project.bannerVh ?? 80}vh]`}>
+				<div
+					className="relative"
+					style={{
+						height: (project.bannerVh ?? 80) + 'vh',
+					}}
+				>
 					<Image
 						src={project.banner}
 						fill
@@ -22,7 +27,7 @@ const ProjectPage: FC<{
 					/>
 				</div>
 			)}
-			<div className="flex flex-col items-center justify-center p-24">
+			<div className="flex flex-col items-center justify-center p-24 text-center">
 				<p>{project.caption}</p>
 				<h1>{project.title}</h1>
 				<h5>{project.description}</h5>

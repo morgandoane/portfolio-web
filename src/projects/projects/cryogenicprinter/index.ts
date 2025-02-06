@@ -10,8 +10,9 @@ const project: Project = {
 		'Prototyping',
 		'Software Engineering',
 	],
-	image: 'energy/squarecover.png',
-	banner: 'energy/cover.png',
+	image: 'printer/printer-small-01.jpg',
+	banner: 'printer/printer-small-02.jpg',
+	bannerVh: 120,
 	description:
 		'An experimental 3D printer, leveraging ice as a fabrication medium.',
 	sections: [],

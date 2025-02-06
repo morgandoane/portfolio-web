@@ -34,7 +34,7 @@ h4,
 h5,
 h6 {
 	font-family: Satoshi, Helvetica, sans-serif;
-	@apply font-medium leading-relaxed;
+	@apply font-medium leading-normal;
 }
 
 h1 {
