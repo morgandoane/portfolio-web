@@ -4,6 +4,7 @@ import ProjectCard from './project.card';
 import { AnimatePresence, motion } from 'framer-motion';
 import Button from '@/components/Button';
 import projects from '@/projects';
+import { Tag } from '@/projects/tag';
 
 const Portfolio: FC = () => {
 	const [tag, setTag] = useState<string | null>(null);
@@ -30,7 +31,7 @@ const Portfolio: FC = () => {
 					{projects
 						.filter((p) => {
 							if (!tag) return true;
-							return p.tags.includes(tag);
+							return p.tags.includes(tag as Tag);
 						})
 						.map((project) => (
 							<motion.div
