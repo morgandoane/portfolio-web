@@ -5,7 +5,8 @@ const project: Project = {
 	title: 'AI at the University of Utah',
 	caption: 'Professional Work - 2023 to Present',
 	tags: ['Data Visualization', 'Software Engineering'],
-	image: 'energy/squarecover.png',
+	image: 'uofuai/campus.jpg',
+	banner: 'uofuai/campus.jpg',
 	description:
 		'A platform to help administrators and faculty understand the needs of their students.',
 	sections: [],

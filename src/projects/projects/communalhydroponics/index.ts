@@ -5,8 +5,8 @@ const project: Project = {
 	title: 'Communal Hydroponics',
 	caption: 'Individual Studio Project - 2022',
 	tags: ['Rendering', 'Computational Design'],
-	image: 'energy/squarecover.png',
-	banner: 'energy/cover.png',
+	image: 'hydroponics/PodRender.9.png',
+	banner: 'hydroponics/PodRender.9.png',
 	description:
 		'The US Energy Map makes the grid visible, compelling, and understandable.',
 	sections: [],

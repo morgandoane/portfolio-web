@@ -1,6 +1,13 @@
 import { Tag } from '../tag';
 import { Section } from './section';
 
+export type Collaborator =
+	| string
+	| {
+			name: string;
+			link: string;
+	  };
+
 export interface Project {
 	/**
 	 * The path to the image in the app directory
@@ -41,6 +48,11 @@ export interface Project {
 	 * The description of the project
 	 */
 	description: string;
+
+	/**
+	 * The collaborators on the project
+	 */
+	collaborators?: Collaborator[];
 
 	/**
 	 * The sections to render in the project
