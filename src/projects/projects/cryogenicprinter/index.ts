@@ -15,7 +15,7 @@ const project: Project = {
 	bannerVh: 120,
 	description:
 		'An experimental 3D printer, leveraging ice as a fabrication medium.',
-	sections: [],
+	content: [],
 };
 
 export default project;

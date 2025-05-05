@@ -8,7 +8,7 @@ const project: Project = {
 	image: 'igd/igd (2).jpg',
 	description:
 		'These wooden sculptures were born from my fascination of Islamic Geometric Design, as taught to me through the work of Eric Broug.',
-	sections: [],
+	content: [],
 };
 
 export default project;

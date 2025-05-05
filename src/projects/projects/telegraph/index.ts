@@ -7,7 +7,7 @@ const project: Project = {
 	tags: ['Computational Design', 'Rendering', 'Prototyping'],
 	image: 'telegraph/telegraph.png',
 	description: 'A material study in sensory modification.',
-	sections: [],
+	content: [],
 };
 
 export default project;

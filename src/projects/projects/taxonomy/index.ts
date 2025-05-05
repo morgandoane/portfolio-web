@@ -7,7 +7,7 @@ const project: Project = {
 	tags: ['Data Visualization'],
 	image: 'taxonomy/cover.jpg',
 	description: 'A comprehensive study of every coffee cup in Cambridge, MA.',
-	sections: [],
+	content: [],
 };
 
 export default project;

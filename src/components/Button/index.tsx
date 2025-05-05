@@ -1,3 +1,4 @@
+'use client';
 import { FC, PropsWithChildren } from 'react';
 import { ButtonProps, buttonStyles, defaultButtonProps } from './props';
 import { Button as BaseButton } from '@headlessui/react';

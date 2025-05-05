@@ -1,5 +1,5 @@
 import { Tag } from '../tag';
-import { Section } from './section';
+import { Content } from './content';
 
 export type Collaborator =
 	| string
@@ -51,11 +51,13 @@ export interface Project {
 
 	/**
 	 * The collaborators on the project
+	 * @see Collaborator
 	 */
 	collaborators?: Collaborator[];
 
 	/**
-	 * The sections to render in the project
+	 * The content of the project
+	 * @see Content
 	 */
-	sections: Section[];
+	content: Content[];
 }

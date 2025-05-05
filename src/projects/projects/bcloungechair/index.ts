@@ -9,7 +9,7 @@ const project: Project = {
 	banner: 'bc/VC07.1.png',
 	description:
 		'A lounge chair designed for the west coast of British Columbia.',
-	sections: [],
+	content: [],
 };
 
 export default project;

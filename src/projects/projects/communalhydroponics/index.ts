@@ -9,7 +9,7 @@ const project: Project = {
 	banner: 'hydroponics/PodRender.9.png',
 	description:
 		'The US Energy Map makes the grid visible, compelling, and understandable.',
-	sections: [],
+	content: [],
 };
 
 export default project;

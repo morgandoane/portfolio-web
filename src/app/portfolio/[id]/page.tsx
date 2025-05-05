@@ -2,6 +2,7 @@ import projects from '@/projects';
 import { FC } from 'react';
 import { redirect } from 'next/navigation';
 import Image from 'next/image';
+import Content from '@/components/Content';
 
 const ProjectPage: FC<{
 	params: Promise<{ id: string }>;
@@ -27,10 +28,15 @@ const ProjectPage: FC<{
 					/>
 				</div>
 			)}
-			<div className="flex flex-col items-center justify-center p-24 text-center">
-				<p>{project.caption}</p>
-				<h1>{project.title}</h1>
-				<h5>{project.description}</h5>
+			<div className="flex flex-col items-center justify-center p-8 py-32 text-center">
+				<p className="text-xl font-semibold">{project.caption}</p>
+				<h1 className="text-6xl font-semibold my-8">{project.title}</h1>
+				<h5 className="text-xl font-semibold">{project.description}</h5>
+			</div>
+			<div className="flex flex-col">
+				{project.content.map((content, index) => (
+					<Content key={`${project.id}-content-${index}`} value={content} />
+				))}
 			</div>
 		</div>
 	);

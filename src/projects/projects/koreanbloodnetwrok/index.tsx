@@ -15,7 +15,7 @@ const project: Project = {
 			link: 'https://donghunkim.dev/',
 		},
 	],
-	sections: [],
+	content: [],
 };
 
 export default project;

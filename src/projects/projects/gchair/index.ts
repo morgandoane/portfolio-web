@@ -9,7 +9,7 @@ const project: Project = {
 	banner: 'gchair/GChair-04.jpg',
 	bannerVh: 180,
 	description: 'A chair designed for Grace.',
-	sections: [],
+	content: [],
 };
 
 export default project;

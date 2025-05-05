@@ -9,7 +9,7 @@ const project: Project = {
 	banner: 'mda/RadialPreview.png',
 	description:
 		'Conveyors should be modular, reliable, and intuitively assembled.',
-	sections: [],
+	content: [],
 };
 
 export default project;

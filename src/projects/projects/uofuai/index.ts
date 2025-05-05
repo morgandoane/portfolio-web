@@ -9,7 +9,7 @@ const project: Project = {
 	banner: 'uofuai/campus.jpg',
 	description:
 		'A platform to help administrators and faculty understand the needs of their students.',
-	sections: [],
+	content: [],
 };
 
 export default project;
