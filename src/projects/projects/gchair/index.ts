@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import GChair from './component';
 
 const project: Project = {
 	id: 'g-chair',
@@ -9,7 +10,7 @@ const project: Project = {
 	banner: 'gchair/GChair-04.jpg',
 	bannerVh: 180,
 	description: 'A chair designed for Grace.',
-	content: [],
+	component: GChair,
 };
 
 export default project;

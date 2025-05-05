@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import CommunalHyroponics from './component';
 
 const project: Project = {
 	id: 'communal-hydroponics',
@@ -9,7 +10,7 @@ const project: Project = {
 	banner: 'hydroponics/PodRender.9.png',
 	description:
 		'The US Energy Map makes the grid visible, compelling, and understandable.',
-	content: [],
+	component: CommunalHyroponics,
 };
 
 export default project;

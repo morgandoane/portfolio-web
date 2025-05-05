@@ -1,5 +1,5 @@
+import { FC } from 'react';
 import { Tag } from '../tag';
-import { Content } from './content';
 
 export type Collaborator =
 	| string
@@ -56,8 +56,7 @@ export interface Project {
 	collaborators?: Collaborator[];
 
 	/**
-	 * The content of the project
-	 * @see Content
+	 * The component to render for the project
 	 */
-	content: Content[];
+	component: FC;
 }

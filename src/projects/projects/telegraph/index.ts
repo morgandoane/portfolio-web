@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import Telegraph from './component';
 
 const project: Project = {
 	id: 'telegraph',
@@ -7,7 +8,7 @@ const project: Project = {
 	tags: ['Computational Design', 'Rendering', 'Prototyping'],
 	image: 'telegraph/telegraph.png',
 	description: 'A material study in sensory modification.',
-	content: [],
+	component: Telegraph,
 };
 
 export default project;

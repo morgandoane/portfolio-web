@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import BcLoungeChair from './component';
 
 const project: Project = {
 	id: 'bc-lounge-chair',
@@ -9,7 +10,7 @@ const project: Project = {
 	banner: 'bc/VC07.1.png',
 	description:
 		'A lounge chair designed for the west coast of British Columbia.',
-	content: [],
+	component: BcLoungeChair,
 };
 
 export default project;

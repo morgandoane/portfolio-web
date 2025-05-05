@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import CryogenicPrinter from './component';
 
 const project: Project = {
 	id: 'cryogenic-printer',
@@ -15,7 +16,7 @@ const project: Project = {
 	bannerVh: 120,
 	description:
 		'An experimental 3D printer, leveraging ice as a fabrication medium.',
-	content: [],
+	component: CryogenicPrinter,
 };
 
 export default project;

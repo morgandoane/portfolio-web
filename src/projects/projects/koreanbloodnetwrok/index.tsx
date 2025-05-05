@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import KoreanBloodNetwork from './component';
 
 const project: Project = {
 	id: 'korean-blood-system',
@@ -15,7 +16,7 @@ const project: Project = {
 			link: 'https://donghunkim.dev/',
 		},
 	],
-	content: [],
+	component: KoreanBloodNetwork,
 };
 
 export default project;

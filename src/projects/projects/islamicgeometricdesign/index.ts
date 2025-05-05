@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import IslamicGeometricDesign from './component';
 
 const project: Project = {
 	id: 'islamic-geometric-design',
@@ -8,7 +9,7 @@ const project: Project = {
 	image: 'igd/igd (2).jpg',
 	description:
 		'These wooden sculptures were born from my fascination of Islamic Geometric Design, as taught to me through the work of Eric Broug.',
-	content: [],
+	component: IslamicGeometricDesign,
 };
 
 export default project;

@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import UofUAI from './component';
 
 const project: Project = {
 	id: 'uofu-ai',
@@ -9,7 +10,7 @@ const project: Project = {
 	banner: 'uofuai/campus.jpg',
 	description:
 		'A platform to help administrators and faculty understand the needs of their students.',
-	content: [],
+	component: UofUAI,
 };
 
 export default project;

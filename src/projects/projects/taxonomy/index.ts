@@ -1,4 +1,5 @@
 import { Project } from '../../types/project';
+import Taxonomy from './component';
 
 const project: Project = {
 	id: 'taxonomy',
@@ -7,7 +8,7 @@ const project: Project = {
 	tags: ['Data Visualization'],
 	image: 'taxonomy/cover.jpg',
 	description: 'A comprehensive study of every coffee cup in Cambridge, MA.',
-	content: [],
+	component: Taxonomy,
 };
 
 export default project;
