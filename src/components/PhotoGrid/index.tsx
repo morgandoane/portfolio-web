@@ -4,9 +4,10 @@ import Image from 'next/image';
 export interface PhotoGridProps {
 	cols?: number;
 	src: string[];
+	mode?: 'cover' | 'contain';
 }
 
-const PhotoGrid: FC<PhotoGridProps> = ({ cols, src }) => {
+const PhotoGrid: FC<PhotoGridProps> = ({ cols, src, mode = 'cover' }) => {
 	const gridTemplateColumns = cols
 		? `repeat(${cols}, minmax(0, 1fr))`
 		: 'repeat(auto-fill, minmax(200px, 1fr))';
@@ -18,7 +19,7 @@ const PhotoGrid: FC<PhotoGridProps> = ({ cols, src }) => {
 						src={imageSrc}
 						alt={`Photo ${index + 1}`}
 						fill
-						className="object-cover"
+						className={`object-${mode}`}
 					/>
 				</div>
 			))}
