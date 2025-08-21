@@ -7,7 +7,8 @@ const project: Project = {
 	caption: 'A data guide to... coffee cups.',
 	tags: ['Data Visualization'],
 	image: 'taxonomy/cover.jpg',
-	description: 'A comprehensive study of every coffee cup in Cambridge, MA.',
+	description:
+		'A comprehensive study of every coffee cup in Salt Lake City, UT.',
 	component: Taxonomy,
 };
 
